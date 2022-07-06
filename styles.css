@@ -1,0 +1,18 @@
+body {
+  background: black;
+  margin: 20px;
+  font-style: oblique;
+  font-family: serif;
+}
+
+.mypara {
+  color: white;
+  font-family: fantasy;
+  font-size: 30px;
+}
+
+.mypara2 {
+  color: white;
+  font-style: oblique;
+  font-family: serif;
+}
