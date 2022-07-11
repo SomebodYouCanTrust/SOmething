@@ -2,18 +2,40 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>sso0mething</title>
+    <title>Something</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1 class="mypara">Unofficial SpaceX webpage</h1>
+    <h1 class="mypara">Roccat setup</h1>
     <p class="mypara2">This page may be insecure.</p>
-    <img src="spacex.jpg" alt="Your device may be at risk" width="200px">
+
+    <img id="roccatlogo" src="roccat.png" alt="DOUBLE the next best" width="200px">
+    <img id="KoneAimo" src="KoneAimo.png" alt="AIMO intellegent lighting system" width="200px">
+    <img id="Kain100" src="roccatKAIN.png" alt="AIMO intellegent lighting system" width="200px">
+    <img id="KoneXP" src="koneXP.png" alt="next-gen 3 dimentional lighting with 19 leds and 8 light guids" width="200px">
+    <img id="VulcanPro" src="roccatVULCAN.png" alt="LinearOptical roccat titan mechanical switches" width="200px">
+    <br>
     <ol>
-      <li class="mypara2">Elon musk is cool</li>
-      <li class="mypara2">Because I said so</li>
-      <li class="mypara2">SpaceX is awsome</li>
-      <li class="mypara2">Because it it just is</li>
+      <il>
+        <a href="#" onclick="setimg('roccat.png')"><li class="mypara2">Roccat</li></a>
+      </il>
+      <il>
+        <a href="#" onclick="setimg('KoneAimo.png')"><li class="mypara2">Roccat Kone Aimo</li></a>
+      </il>
+      <il>
+        <a href="#" onclick"setimg('roccatKAIN.png')"><li class="mypara2">Roccat Kain 100 Aimo</li></a>
+      </li>
+      <li>
+        <a href="#" onclick"setimg('koneXP.png')"><li class="mypara2">Roccat Kone XP</li></a>
+      </li>
+      <li>
+        <a href="#" onclick"setimg('roccatVULCAN.png')"><li class="mypara2">Roccat Vulcan Pro</li></a> 
+      </li>
     </ol>
-   </body>
+</body>
+<script type="text/javascript">
+    function setimg(imgname) {
+      document.getElementById('myimg').scr=imgname;
+    }
+</script>
 </html>
