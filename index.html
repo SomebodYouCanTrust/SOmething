@@ -2,36 +2,25 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Something</title>
+    <title>RoccatSetup</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1 class="mypara">Roccat setup</h1>
-    <p class="mypara2">This page may be insecure.</p>
-
-    <img id="roccatlogo" src="roccat.png" alt="DOUBLE the next best" width="200px">
-    <br>
-    <ol>
-      <il>
-        <a href="#" onclick="setimg('roccat.png')"><li class="mypara2">Roccat</li></a>
-      </il>
-      <il>
-        <a href="#" onclick="setimg('KoneAimo.png')"><li class="mypara2">Roccat Kone Aimo</li></a>
-      </il>
-      <il>
-        <a href="#" onclick"setimg('roccatKAIN.png')"><li class="mypara2">Roccat Kain 100 Aimo</li></a>
-      </li>
-      <li>
-        <a href="#" onclick"setimg('koneXP.png')"><li class="mypara2">Roccat Kone XP</li></a>
-      </li>
-      <li>
-        <a href="#" onclick"setimg('roccatVULCAN.png')"><li class="mypara2">Roccat Vulcan Pro</li></a> 
-      </li>
-    </ol>
-</body>
-<script type="text/javascript">
+    <h1 class="mypara">Roccat Setup</h1>
+    <p class="mypara">Telly Bridging setup</p>
+      <ol class="mypara">
+        <li><a href="#" onclick="setimg('roccat.png')"><li class="mypara2">Roccat</li></a>
+        <li><a href="#" onclick="setimg('KoneAimo.png')"><li class="mypara2">Roccat Kone Aimo</li></a>
+        <li><a href="#" onclick="setimg('roccatKAIN.png')"><li class="mypara2">Roccat Kain 100 Aimo</li></a>
+        <li><a href="#" onclick="setimg('koneXP.png')"><li class="mypara2">Roccat Kone XP</li></a>
+        <li><a href="#" onclick="setimg('roccatVULCAN.png')"><li class="mypara2">Roccat Vulcan Pro</li></a>
+      </ol>
+      <a href="https://www.roccat.com/">Roccat Homepage</a>
+      <img id="myimg" src="roccat.png" class="right" alt="nothing" width="220px">
+  </body>
+  <script type="text/javascript">
     function setimg(imgname) {
-      document.getElementById('myimg').scr=imgname;
+      document.getElementById('myimg').src = imgname;
     }
-</script>
+  </script>
 </html>
