@@ -1,23 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title class="mypara2">Somebody else's code</title>
+    <title></title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="covid.json"></script>
+
   </head>
   <body>
 
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Somebody else's code<i class="large material-icons">adb</i></a>
+        <a href="#" class="brand-logo">Covid Graph<i class="large material-icons">adb</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="THE LINK I WANT THE BUTTON 'INFORMATION' TO BE">Information</a></li>
+          <li><a href="about.html">Information</a></li>
         </ul>
       </div>
     </nav>
@@ -28,23 +29,48 @@
         <div class="col s12 m6">
           <div class="card ">
             <div class="card-content">
-              <span class="card-title">Welcome!</span>
-              <p>Welcome to the completely legal free copy-and-paste non-playgiarism
-                free view code website that is definetely* a reliable source.</p>
+              <span class="card-title">Covid map graph</span>
+              <p>To be continued.</p>
             </div>
           </div>
         </div>
         <div class="col s12 m6">
           <div class="card ">
             <div class="card-content">
-              <span class="card-title">Something</span>
-              <p>this is a hackable website that may not have any advanced security
-                system or on-board memory.</p>
+              <span class="card-title">Statistics data graph</span>
+              <p>To be continued</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Data</span>
+              <p id="mydata"></p>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </body>
-</html>
+  <script type="text/javascript">
+      getData();
+      function getData() {
+        var allData = ""
+        var line = ""
+         for (var country = 0; country < (coviddata.data.length); country++) {
+           line += `<b><span style='color:violet'>${coviddata.data[country].location}</span></b>: ${coviddata.data[country].confirmed} Cases | ${coviddata.data[country].dead} Deaths `;
+           if (line.length >= 1000) {
+             line += "<br>"
+             allData += line
+             line = ""
+           }
+         }
+         document.getElementById('mydata').innerHTML = allData;
+         document.getElementById('mydata').style.textAlign = "justify";
+      }
+    </script>
+  </html>
