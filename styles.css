@@ -4,13 +4,19 @@ body {
   background-repeat: no-repeat;
   background-size: auto;
   margin: 30px;
-  font-family: cursive;
+  font-family: monospace;
 }
 
 .mypara {
   font-family: fantasy;
   color: white;
   font-size: 30px;
+}
+
+.mypara2 {
+  font-family: cursive;
+  color: white;
+  font-size: 50px;
 }
 
 .right {
