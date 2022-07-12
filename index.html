@@ -2,25 +2,28 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>RoccatSetup</title>
+    <title>stuff to Speedtelly</title>
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
-    <h1 class="mypara">Roccat Setup</h1>
-    <p class="mypara">Telly Bridging setup</p>
+  <body id='mybackground'>
+    <h1 class="mypara2">stuff to speedtelly</h1>
+    <p id='myinfo'><b><span style='font-size:40px;color:white;'>HypixelGear</span></b></p>
       <ol class="mypara">
-        <li><a href="#" onclick="setimg('roccat.png')"><li class="mypara2">Roccat</li></a>
-        <li><a href="#" onclick="setimg('KoneAimo.png')"><li class="mypara2">Roccat Kone Aimo</li></a>
-        <li><a href="#" onclick="setimg('roccatKAIN.png')"><li class="mypara2">Roccat Kain 100 Aimo</li></a>
-        <li><a href="#" onclick="setimg('koneXP.png')"><li class="mypara2">Roccat Kone XP</li></a>
-        <li><a href="#" onclick="setimg('roccatVULCAN.png')"><li class="mypara2">Roccat Vulcan Pro</li></a>
+        <li><a href="#" onclick="setimg('konePRO.jpg', 'wireless mouse made for speedtelly')">Roccat Kone Pro AIR</a></li>
+        <li><a href="#" onclick="setimg('KoneXP.png', 'underrated drag click mouse')">Roccat Kone XP AIMO</a></li>
+        <li><a href="#" onclick="setimg('roccatKAIN.png', 'overrated noob godbridging mouce')">Roccat KAIN 100 AIMO</a></li>
+        <li><a href="#" onclick="setimg('KoneAimo.png', 'overrated drag click mouse')">Roccat Kone AIMO</a></li>
+        <li><a href="#" onclick="setimg('roccatVULCAN.png', 'average mechanical keyboard')">Roccat Vulcan Pro</a></li>
       </ol>
-      <a href="https://www.roccat.com/">Roccat Homepage</a>
-      <img id="myimg" src="roccat.png" class="right" alt="nothing" width="220px">
+      <a href="roccat.com">Roccat website homepage</a>
+      <img id="myimg" src="roccat.png" class="right" alt="logo" height="200px">
   </body>
   <script type="text/javascript">
-    function setimg(imgname) {
+    function setimg(imgname, desc) {
       document.getElementById('myimg').src = imgname;
+      document.getElementById('myimg').alt = desc;
+      document.getElementById('myinfo').innerHTML = `<b><span style='font-size:50px;color:white;'>${desc}</span></b>`;
+
     }
   </script>
 </html>
