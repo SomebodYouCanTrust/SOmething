@@ -16,8 +16,8 @@ coviddata = {
          "country_code":"za",
          "latitude":-30.559482,
          "longitude":22.937506,
-         "confirmed":1786080,
-         "dead":103,
+         "confirmed":1786053480,
+         "dead":345456103,
          "recovered":1486873,
          "updated":"2021-06-18 06:35:03.708417+00:00"
       },
@@ -26,9 +26,9 @@ coviddata = {
          "country_code":"ir",
          "latitude":32.427908,
          "longitude":53.688046,
-         "confirmed":2168872,
-         "dead":65680,
-         "recovered":1749041,
+         "confirmed":216843872,
+         "dead":65654580,
+         "recovered":17490641,
          "updated":"2021-04-15 14:15:07.782944+00:00"
       },
       {
@@ -36,9 +36,9 @@ coviddata = {
          "country_code":"br",
          "latitude":-14.235004,
          "longitude":-51.92528,
-         "confirmed":17704041,
-         "dead":496172,
-         "recovered":16077483,
+         "confirmed":1770405441,
+         "dead":496167872,
+         "recovered":160577483,
          "updated":"2021-06-18 11:30:09.524722+00:00"
       },
       {
@@ -46,9 +46,9 @@ coviddata = {
          "country_code":"de",
          "latitude":51.165691,
          "longitude":10.451526,
-         "confirmed":3064382,
-         "dead":79813,
-         "recovered":2736100,
+         "confirmed":3064453676482,
+         "dead":74564734813,
+         "recovered":273645420,
          "updated":"2021-04-15 14:15:07.782944+00:00"
       },
       {
