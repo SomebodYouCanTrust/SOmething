@@ -1,19 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Dashboard</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="covid.json"></script>
-
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="crossorigin=""/>
+    <script src="data.json"></script>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="crossorigin=""></script>
   </head>
   <body>
-
     <nav>
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">Covid Graph<i class="large material-icons">adb</i></a>
@@ -23,34 +24,29 @@
       </div>
     </nav>
 
-    <div class="mycontainer">
-
-      <div class="row">
-        <div class="col s12 m6">
-          <div class="card ">
-            <div class="card-content">
-              <span class="card-title">Covid map graph</span>
-              <p>cant upload all the map png's.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m6">
-          <div class="card ">
-            <div class="card-content">
-              <span class="card-title">Statistics data graph</span>
-              <p>To be continued</p>
-            </div>
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Map</span>
+             <div id="map"></div>
           </div>
         </div>
       </div>
-
-      <div class="row">
-        <div class="col s12">
-          <div class="card">
-            <div class="card-content">
-              <span class="card-title">Data</span>
-              <p id="mydata"></p>
-            </div>
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Graph</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Data</span>
+            <p class='data' id='mydata' style='font-size:9px'></p>
           </div>
         </div>
       </div>
@@ -60,36 +56,34 @@
     getData();
     function getData() {
       var allData = "<ul class='collection'>"
-       for (var country = 0; country < 5; country++) {
-         allData += `<li class="collection-item avatar">${coviddata.data[country].location}</span></b></span><p>${coviddata.data[country].confirmed} Cases <br>${coviddata.data[country].dead} Deaths</p><a href="#!" class="secondary-content"></i></a></li>`
+       for (var country = 0; country < coviddata.data.length; country++) {
+         allData += `<li class="collection-item avatar"><img id="currentPhoto" src="https://www.crwflags.com/fotw/images/${coviddata.data[country].country_code.charAt(0)}/${coviddata.data[country].country_code}.gif" alt='Image not found' onerror="this.onerror=null;this.src='errorflags/${coviddata.data[country].location}.png';" class='circle';/><span class="title"><b><span style="color:teal">${coviddata.data[country].location}</span></b></span><p>${coviddata.data[country].confirmed} Cases <br>${coviddata.data[country].dead} Deaths</p><a href="#!" class="secondary-content"><i class="material-icons">grade</i></a></li>`
        }
        allData += "</ul>";
        document.getElementById('mydata').innerHTML = allData;
     }
     mapping();
-        function mapping() {
-          var map = L.map('map').setView([51.505, -0.09], 13);
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-              maxZoom: 19,
-              attribution: '© OpenStreetMap'
-          }).addTo(map);s
-        }
-
+    function mapping() {
+      var map = L.map('map').setView([45.501, -73.56], 1);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap'
+      }).addTo(map);
+      algo(map);
+    }
+    function algo(map) {
+      for (var c = 0; c < coviddata.data.length; c++) {
+        la = coviddata.data[c].latitude;
+        lo = coviddata.data[c].longitude;
+        r = (coviddata.data[c].dead)*2.5;
+        pop = `<span style="color:teal"><b>${coviddata.data[c].location}</b></span><br>${coviddata.data[c].confirmed} Cases<br>${coviddata.data[c].dead} Deaths<br>`
+        var circle = L.circle([la, lo], {
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: r
+        }).addTo(map).bindPopup(pop);
+      }
+    }
   </script>
 </html>
-
-this part does not work cus i cant get all the map png's (this is only a preview to show you):     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="data.js"></script>
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-  integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-  crossorigin=""/>
-
-    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
-  integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
-  crossorigin="">
