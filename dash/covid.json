@@ -6,8 +6,8 @@ coviddata = {
          "country_code":"in",
          "latitude":20.593684,
          "longitude":78.96288,
-         "confirmed":6209762793,
-         "dead":128352157,
+         "confirmed":42762793,
+         "dead":1280157,
          "recovered":43,
          "updated":"2021-06-18 11:30:09.524722+00:00"
       },
@@ -16,9 +16,9 @@ coviddata = {
          "country_code":"za",
          "latitude":-30.559482,
          "longitude":22.937506,
-         "confirmed":1786053480,
-         "dead":345456103,
-         "recovered":1486873,
+         "confirmed":1786480,
+         "dead":345103,
+         "recovered":148873,
          "updated":"2021-06-18 06:35:03.708417+00:00"
       },
       {
@@ -26,9 +26,9 @@ coviddata = {
          "country_code":"ir",
          "latitude":32.427908,
          "longitude":53.688046,
-         "confirmed":216843872,
-         "dead":65654580,
-         "recovered":17490641,
+         "confirmed":216872,
+         "dead":65450,
+         "recovered":170641,
          "updated":"2021-04-15 14:15:07.782944+00:00"
       },
       {
@@ -36,9 +36,9 @@ coviddata = {
          "country_code":"br",
          "latitude":-14.235004,
          "longitude":-51.92528,
-         "confirmed":1770405441,
-         "dead":496167872,
-         "recovered":160577483,
+         "confirmed":1035441,
+         "dead":496872,
+         "recovered":167483,
          "updated":"2021-06-18 11:30:09.524722+00:00"
       },
       {
@@ -46,9 +46,9 @@ coviddata = {
          "country_code":"de",
          "latitude":51.165691,
          "longitude":10.451526,
-         "confirmed":3064453676482,
-         "dead":74564734813,
-         "recovered":273645420,
+         "confirmed":3066482,
+         "dead":745313,
+         "recovered":3645420,
          "updated":"2021-04-15 14:15:07.782944+00:00"
       },
       {
@@ -58,7 +58,7 @@ coviddata = {
          "longitude":105.318756,
          "confirmed":4675153,
          "dead":104398,
-         "recovered":4301448,
+         "recovered":41448,
          "updated":"2021-04-15 14:15:07.782944+00:00"
       },
       {
@@ -76,7 +76,7 @@ coviddata = {
          "country_code":"sa",
          "latitude":23.885942,
          "longitude":45.079162,
-         "confirmed":401157,
+         "confirmed":4011357,
          "dead":6781,
          "recovered":385441,
          "updated":"2021-04-15 10:00:07.929558+00:00"
@@ -156,7 +156,7 @@ coviddata = {
          "country_code":"fr",
          "latitude":46.227638,
          "longitude":2.213749,
-         "confirmed":5149834,
+         "confirmed":51491834,
          "dead":99777,
          "recovered":315152,
          "updated":"2021-04-15 14:15:07.782944+00:00"
@@ -166,7 +166,7 @@ coviddata = {
          "country_code":"be",
          "latitude":50.503887,
          "longitude":4.469936,
-         "confirmed":935316,
+         "confirmed":9351316,
          "dead":23603,
          "recovered":60320,
          "updated":"2021-04-15 10:15:12.737432+00:00"
@@ -206,7 +206,7 @@ coviddata = {
          "country_code":"sy",
          "latitude":34.80207499999999,
          "longitude":38.996815,
-         "confirmed":20555,
+         "confirmed":201555,
          "dead":1402,
          "recovered":14335,
          "updated":"2021-04-15 10:00:07.929558+00:00"
@@ -216,7 +216,7 @@ coviddata = {
          "country_code":"az",
          "latitude":40.143105,
          "longitude":47.576927,
-         "confirmed":291894,
+         "confirmed":2911894,
          "dead":4009,
          "recovered":255833,
          "updated":"2021-04-15 10:00:07.929558+00:00"
@@ -226,7 +226,7 @@ coviddata = {
          "country_code":"co",
          "latitude":4.570868,
          "longitude":-74.297333,
-         "confirmed":2585801,
+         "confirmed":25815801,
          "dead":66819,
          "recovered":2419265,
          "updated":"2021-04-15 14:15:07.782944+00:00"
@@ -236,7 +236,7 @@ coviddata = {
          "country_code":"id",
          "latitude":-0.789275,
          "longitude":113.921327,
-         "confirmed":1589359,
+         "confirmed":15893159,
          "dead":43073,
          "recovered":1438254,
          "updated":"2021-04-15 14:15:07.782944+00:00"
@@ -256,9 +256,9 @@ coviddata = {
          "country_code":"mx",
          "latitude":23.634501,
          "longitude":-102.552784,
-         "confirmed":2291246,
-         "dead":210812,
-         "recovered":1817866,
+         "confirmed":591246,
+         "dead":211012,
+         "recovered":181866,
          "updated":"2021-04-15 14:15:07.782944+00:00"
       },
       {
@@ -266,7 +266,7 @@ coviddata = {
          "country_code":"tr",
          "latitude":38.963745,
          "longitude":35.243322,
-         "confirmed":4025557,
+         "confirmed":40255517,
          "dead":34734,
          "recovered":3480146,
          "updated":"2021-04-15 14:15:07.782944+00:00"
@@ -286,7 +286,7 @@ coviddata = {
          "country_code":"ga",
          "latitude":-0.803689,
          "longitude":11.609444,
-         "confirmed":21566,
+         "confirmed":2111566,
          "dead":132,
          "recovered":18219,
          "updated":"2021-04-15 10:00:07.929558+00:00"
@@ -306,7 +306,7 @@ coviddata = {
          "country_code":"ae",
          "latitude":23.424076,
          "longitude":53.847818,
-         "confirmed":489495,
+         "confirmed":4891495,
          "dead":1541,
          "recovered":473398,
          "updated":"2021-04-15 10:00:07.929558+00:00"
@@ -326,7 +326,7 @@ coviddata = {
          "country_code":"gn",
          "latitude":9.945587,
          "longitude":-9.696645,
-         "confirmed":21299,
+         "confirmed":2111299,
          "dead":136,
          "recovered":18815,
          "updated":"2021-04-15 10:00:07.929558+00:00"
@@ -356,7 +356,7 @@ coviddata = {
          "country_code":"au",
          "latitude":-25.274398,
          "longitude":133.775136,
-         "confirmed":29457,
+         "confirmed":291457,
          "dead":910,
          "recovered":26381,
          "updated":"2021-04-15 10:00:07.929558+00:00"
@@ -376,7 +376,7 @@ coviddata = {
          "country_code":"pa",
          "latitude":8.537981,
          "longitude":-80.782127,
-         "confirmed":359516,
+         "confirmed":3595116,
          "dead":6177,
          "recovered":349318,
          "updated":"2021-04-15 10:00:07.929558+00:00"
@@ -1292,16 +1292,6 @@ coviddata = {
          "updated":"2021-04-15 10:00:07.929558+00:00"
       },
       {
-         "location":"Somaliland",
-         "country_code":"05",
-         "latitude":9.411743399999999,
-         "longitude":46.8252838,
-         "confirmed":1354,
-         "dead":47,
-         "recovered":1200,
-         "updated":"2021-01-17 18:15:05.170138+00:00"
-      },
-      {
          "location":"Togo",
          "country_code":"tg",
          "latitude":8.619543,
@@ -1502,16 +1492,6 @@ coviddata = {
          "updated":"2021-04-15 10:00:07.929558+00:00"
       },
       {
-         "location":"Diamond Princess",
-         "country_code":"01",
-         "latitude":40.86429589999999,
-         "longitude":-73.9614914,
-         "confirmed":712,
-         "dead":13,
-         "recovered":699,
-         "updated":"2021-04-15 10:00:07.929558+00:00"
-      },
-      {
          "location":"Sierra Leone",
          "country_code":"sl",
          "latitude":8.460555,
@@ -1546,9 +1526,9 @@ coviddata = {
          "country_code":"pm",
          "latitude":46.8852,
          "longitude":-56.3159,
-         "confirmed":24,
-         "dead":0,
-         "recovered":24,
+         "confirmed":2224,
+         "dead":10,
+         "recovered":234,
          "updated":"2021-04-15 10:00:07.929558+00:00"
       },
       {
@@ -1572,14 +1552,14 @@ coviddata = {
          "updated":"2021-04-15 10:00:07.929558+00:00"
       },
       {
-         "location":"Saint Kitts and Nevis",
-         "country_code":"kn",
-         "latitude":17.357822,
-         "longitude":-62.782998,
-         "confirmed":44,
-         "dead":0,
-         "recovered":44,
-         "updated":"2021-04-15 10:00:07.929558+00:00"
+        "location":"Antartica",
+        "country_code":"12",
+        "latitude":-80,
+        "longitude":20,
+        "confirmed":42762798,
+        "dead":1380157,
+        "recovered":397,
+        "updated":"2021-01-17 18:15:05.170138+00:00"
       },
       {
          "location":"Romania",
@@ -1652,16 +1632,6 @@ coviddata = {
          "updated":"2021-04-15 10:00:07.929558+00:00"
       },
       {
-         "location":"Sint Eustatius",
-         "country_code":"bq",
-         "latitude":17.4890306,
-         "longitude":-62.973555,
-         "confirmed":18,
-         "dead":0,
-         "recovered":18,
-         "updated":"2021-01-17 18:15:05.170138+00:00"
-      },
-      {
          "location":"Isle of Man",
          "country_code":"im",
          "latitude":54.236107,
@@ -1686,20 +1656,10 @@ coviddata = {
          "country_code":"ws",
          "latitude":-13.759029,
          "longitude":-172.104629,
-         "confirmed":3,
+         "confirmed":33422,
          "dead":0,
          "recovered":2,
          "updated":"2021-04-15 10:00:07.929558+00:00"
-      },
-      {
-         "location":"Coral Princess",
-         "country_code":"11",
-         "latitude":20.5331399,
-         "longitude":-86.9387546,
-         "confirmed":12,
-         "dead":3,
-         "recovered":0,
-         "updated":"2021-01-17 18:15:05.170138+00:00"
       },
       {
          "location":"Brunei ",
@@ -1766,19 +1726,9 @@ coviddata = {
          "country_code":"ai",
          "latitude":18.220554,
          "longitude":-63.06861499999999,
-         "confirmed":25,
-         "dead":0,
-         "recovered":22,
-         "updated":"2021-04-15 10:00:07.929558+00:00"
-      },
-      {
-         "location":"New Caledonia",
-         "country_code":"nc",
-         "latitude":-20.904305,
-         "longitude":165.618042,
-         "confirmed":121,
-         "dead":0,
-         "recovered":58,
+         "confirmed":22345,
+         "dead":2310,
+         "recovered":2322,
          "updated":"2021-04-15 10:00:07.929558+00:00"
       },
       {
@@ -1786,9 +1736,9 @@ coviddata = {
          "country_code":"mh",
          "latitude":7.131474,
          "longitude":171.184478,
-         "confirmed":4,
-         "dead":0,
-         "recovered":4,
+         "confirmed":42342,
+         "dead":230,
+         "recovered":423,
          "updated":"2021-04-15 10:00:07.929558+00:00"
       },
       {
@@ -1836,9 +1786,9 @@ coviddata = {
          "country_code":"sb",
          "latitude":-9.64571,
          "longitude":160.156194,
-         "confirmed":19,
-         "dead":0,
-         "recovered":18,
+         "confirmed":12339,
+         "dead":420,
+         "recovered":1823,
          "updated":"2021-04-15 10:00:07.929558+00:00"
       },
       {
@@ -1906,9 +1856,9 @@ coviddata = {
          "country_code":"vu",
          "latitude":-15.376706,
          "longitude":166.959158,
-         "confirmed":3,
-         "dead":0,
-         "recovered":1,
+         "confirmed":24423,
+         "dead":133,
+         "recovered":1234,
          "updated":"2021-04-15 10:00:07.929558+00:00"
       },
       {
@@ -2010,16 +1960,6 @@ coviddata = {
          "dead":6312,
          "recovered":827184,
          "updated":"2021-04-15 10:00:07.929558+00:00"
-      },
-      {
-         "location":"Northern Cyprus",
-         "country_code":"00",
-         "latitude":35.2480359,
-         "longitude":33.6577243,
-         "confirmed":1850,
-         "dead":11,
-         "recovered":1602,
-         "updated":"2021-01-17 18:15:05.170138+00:00"
       },
       {
          "location":"Bangladesh",
@@ -2132,16 +2072,6 @@ coviddata = {
          "updated":"2021-04-15 10:00:07.929558+00:00"
       },
       {
-         "location":"Artsakh",
-         "country_code":"12",
-         "latitude":26.0434384,
-         "longitude":-80.2777081,
-         "confirmed":1130,
-         "dead":30,
-         "recovered":337,
-         "updated":"2021-01-17 18:15:05.170138+00:00"
-      },
-      {
          "location":"Ivory Coast",
          "country_code":"ci",
          "latitude":7.539988999999999,
@@ -2170,16 +2100,6 @@ coviddata = {
          "dead":31,
          "recovered":947,
          "updated":"2021-04-15 10:00:07.929558+00:00"
-      },
-      {
-         "location":"USS Theodore Roosevelt",
-         "country_code":"09",
-         "latitude":0.0,
-         "longitude":0.0,
-         "confirmed":1102,
-         "dead":1,
-         "recovered":751,
-         "updated":"2021-01-17 18:15:05.170138+00:00"
       },
       {
          "location":"Northern Mariana Islands ",
@@ -2212,16 +2132,6 @@ coviddata = {
          "updated":"2021-04-15 10:00:07.929558+00:00"
       },
       {
-         "location":"Kosovo",
-         "country_code":"xk",
-         "latitude":42.6026359,
-         "longitude":20.902977,
-         "confirmed":55498,
-         "dead":1405,
-         "recovered":48990,
-         "updated":"2021-01-17 18:15:05.170138+00:00"
-      },
-      {
          "location":"Nicaragua",
          "country_code":"ni",
          "latitude":12.865416,
@@ -2250,26 +2160,6 @@ coviddata = {
          "dead":10,
          "recovered":3273,
          "updated":"2021-04-15 10:00:07.929558+00:00"
-      },
-      {
-         "location":"MS Zaandam",
-         "country_code":"03",
-         "latitude":0.0,
-         "longitude":0.0,
-         "confirmed":9,
-         "dead":2,
-         "recovered":7,
-         "updated":"2021-04-15 10:00:07.929558+00:00"
-      },
-      {
-         "location":"Abkhazia",
-         "country_code":"06",
-         "latitude":43.0015544,
-         "longitude":41.023407,
-         "confirmed":7504,
-         "dead":100,
-         "recovered":5545,
-         "updated":"2021-01-17 18:15:05.170138+00:00"
       },
       {
          "location":"Guam",
