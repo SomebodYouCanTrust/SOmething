@@ -1,9 +1,18 @@
+body {
+  background-image: url("covid.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+
 .nav-wrapper {
-  background: #0d47a1;
+  background-image: url("thing.gif");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .brand-logo {
   margin-left: 30px;
 }
 
-#map { height: 300px; }
+#map { height: 300px }
