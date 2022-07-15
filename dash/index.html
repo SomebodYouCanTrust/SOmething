@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -9,10 +8,15 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="crossorigin=""/>
-    <script src="data.json"></script>
-    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="crossorigin=""></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="covid.json"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   </head>
   <body>
     <nav>
@@ -25,65 +29,117 @@
     </nav>
 
     <div class="row">
+
       <div class="col s12 m6">
         <div class="card">
           <div class="card-content">
             <span class="card-title">Map</span>
-             <div id="map"></div>
+            <div id="map"></div>
           </div>
         </div>
       </div>
       <div class="col s12 m6">
         <div class="card">
           <div class="card-content">
-            <span class="card-title">Graph</span>
+            <span class="card-title">Chart</span>
+            <canvas id="bar-chart" width="800" height="450"></canvas>
           </div>
         </div>
       </div>
+
     </div>
+
     <div class="row">
       <div class="col s12">
         <div class="card">
           <div class="card-content">
             <span class="card-title">Data</span>
-            <p class='data' id='mydata' style='font-size:9px'></p>
+            <p id="mydata"></p>
           </div>
         </div>
       </div>
     </div>
+
   </body>
+
   <script type="text/javascript">
+
+
+
     getData();
     function getData() {
       var allData = "<ul class='collection'>"
-       for (var country = 0; country < coviddata.data.length; country++) {
-         allData += `<li class="collection-item avatar"><img id="currentPhoto" src="https://www.crwflags.com/fotw/images/${coviddata.data[country].country_code.charAt(0)}/${coviddata.data[country].country_code}.gif" alt='Image not found' onerror="this.onerror=null;this.src='errorflags/${coviddata.data[country].location}.png';" class='circle';/><span class="title"><b><span style="color:teal">${coviddata.data[country].location}</span></b></span><p>${coviddata.data[country].confirmed} Cases <br>${coviddata.data[country].dead} Deaths</p><a href="#!" class="secondary-content"><i class="material-icons">grade</i></a></li>`
+       for (var country = 0; country < coviddata.data.sort(function(a,b){return a.recovered - b.recovered}).sort(function(a,b){return b.confirmed - a.confirmed}).sort(function(a,b){return b.dead - a.dead}).length; country++) {
+         allData += `<li class="collection-item avatar"><img id="currentPhoto" src="https://www.crwflags.com/fotw/images/${coviddata.data[country].country_code.charAt(0)}/${coviddata.data[country].country_code}.gif" alt='noflag' onerror="this.onerror=null;this.src='noflag/${coviddata.data[country].location}.png';" class='circle';/><span class="title"><b><span style="color:black">${country+1}. ${coviddata.data[country].location}</span></b></span><p>${coviddata.data[country].dead} Deaths<br>${coviddata.data[country].confirmed} Cases <br>${coviddata.data[country].recovered} Recovered</p></li>`
        }
        allData += "</ul>";
        document.getElementById('mydata').innerHTML = allData;
     }
-    mapping();
+mapping();
     function mapping() {
-      var map = L.map('map').setView([45.501, -73.56], 1);
+      var map = L.map('map').setView([51,0], 1);
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '© OpenStreetMap'
+          maxZoom: 19,
+          attribution: '© OpenStreetMap'
       }).addTo(map);
+      // don't need the marker any more
+      //var marker = L.marker([51.5, -0.09]).addTo(map);
       algo(map);
     }
+
     function algo(map) {
-      for (var c = 0; c < coviddata.data.length; c++) {
-        la = coviddata.data[c].latitude;
-        lo = coviddata.data[c].longitude;
-        r = (coviddata.data[c].dead)*2.5;
-        pop = `<span style="color:teal"><b>${coviddata.data[c].location}</b></span><br>${coviddata.data[c].confirmed} Cases<br>${coviddata.data[c].dead} Deaths<br>`
-        var circle = L.circle([la, lo], {
+      for (i=0;i<coviddata.data.length;i++) {
+        lat = coviddata.data[i].latitude;
+        lon = coviddata.data[i].longitude;
+        rad = coviddata.data[i].dead * 2;
+
+        pop = "<h5>Detail</h5>" + coviddata.data[i].location + "<br>" + coviddata.data[i].dead;
+
+        var circle = L.circle([lat, lon], {
             color: 'red',
             fillColor: '#f03',
             fillOpacity: 0.5,
-            radius: r
-        }).addTo(map).bindPopup(pop);
+            radius: rad
+        }).bindPopup(pop).addTo(map);
       }
     }
+
+    bar();
+    function bar() {
+
+      objs = coviddata.data;
+      objs.sort((a,b) => b.dead - a.dead);
+
+      mylabs = [];
+      mydata = [];
+      for (i=0;i<5;i++) {
+        mylabs.push(coviddata.data[i].location);
+        mydata.push(coviddata.data[i].dead);
+      }
+
+      new Chart(document.getElementById("bar-chart"), {
+        type: 'bar',
+        data: {
+          labels: mylabs,
+          datasets: [
+            {
+              label: "COVID deaths",
+              backgroundColor: ["#3cba9f", "#c45850","teal","#e8c3b9","blue"],
+              data: mydata
+            }
+          ]
+        },
+        options: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: 'COVID deaths 2021'
+          }
+        }
+      });
+    }
+
+
   </script>
+
 </html>
